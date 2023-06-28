@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ken Capobianco</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="header">
-        <h1 class="logo">Ken Capobianco</h1>
+        <div class="top-bar">
+            <h1 class="logo">Ken Capobianco</h1>
+            <p class="ticker">He is a music critic who has written about pop music and the arts for over thirty years after receiving his M.A.</p>
+            <img src="./assets/mode.svg" alt="">
+        </div>
+
         <nav>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="#books">Books</a></li>
                 <li><a href="">Reviews</a></li>
@@ -22,19 +30,22 @@
     </div>
 
 
-    <div class="hero">
+    <div id="hero" class="hero">
         <div class="content">
             <div class="content-padding">
                 <h2>Ken <span>Capobianco</span></h2>
-                <p>Author of Call Me Anorexic: The Ballad of a Thin Man and A Field Guide to Temporary Madness and Extraordinarily Ordinary Sex</p>
+                <p>Author of <strong>Call Me Anorexic:</strong> The Ballad of a Thin Man & <strong>A Field Guide</strong> to Temporary Madness and Extraordinarily Ordinary Sex</p>
                 <a href="#">Buy on Amazon</a>
             </div>
         </div>
         <div class="photo">
             <div class="photo-padding">
                 <img src="./assets/ken-capobianco.jpeg" alt="">
-                <p class="photo-caption">His award-winning work has appeared in The Boston Globe</p>
-            </div>
+                <p class="photo-caption">
+                    His award-winning work has appeared in The Boston Globe, Billboard, The New York Times, The Cape Cod Times, The Journal of Modern Literature, and many other publications
+                </p>
+                <p class="signature">Ken Capobianco</p>    
+                </div>
 
         </div>
     </div>
@@ -42,9 +53,23 @@
 
     <div id="books" class="books">
         <h3>Ken Capobianco's Latest Releases</h3>
-
+        <div class="releases">
+            <div class="call-me">
+                <img src="./assets/sleepwalker.png" alt="">
+            </div>
+            <div class="field-guide">
+                <img src="./assets/sleepwalker.png" alt="">
+            </div>
+        </div>
     </div>
 
+    <div class="social">
+        <ul>
+            <li><a href="#"><img src="./assets/facebook.svg" alt=""></a></li>
+            <li><a href="#"><img src="./assets/twitter.svg" alt=""></a></li>
+            <li><a href="#"><img src="./assets/instagram.svg" alt=""></a></li>
+        </ul>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

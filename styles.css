@@ -16,20 +16,42 @@ body {
 /********************************/
 
 .header {
-    padding: 22px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.header .top-bar {
+    padding: 12px 166px;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1.logo {
-    text-align: center;
+    text-align: left;
     font-size: 18px;
+}
+
+.top-bar .ticker {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.top-bar img {
+    width: 16px;
+    height: 16px;
 }
 
 ul.nav-links {
     display: flex;
     list-style: none;
     justify-content: center;
-    padding: 16px 0px 20px 0px;
-    gap: 20px;
+    padding: 9px 0px 12px 24px;
+    gap: 30px;
 }
 
 .nav-links li a {
@@ -37,7 +59,8 @@ ul.nav-links {
     display: block;
     text-decoration: none;
     color: inherit;
-    font-size: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 
 
@@ -47,19 +70,26 @@ ul.nav-links {
 
 .hero {
     display: flex;
-    height: 620px;
+    height: 680px;
+    padding-top: 50px;
 }
 
 .hero .content, .hero .photo {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
 }
 
 .hero .content {
     background-color: #E5E8E5;
+    justify-content: center;
+}
+
+.hero .photo {
+    justify-content: flex-end;
+    padding-bottom: 30px;
 }
 
 .content-padding {
@@ -67,9 +97,7 @@ ul.nav-links {
     height: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 30px;
-    /* border: 4px solid green; */
+    justify-content: center;
 }
 
 .hero .content h2 {
@@ -86,10 +114,23 @@ ul.nav-links {
 .hero .content p {
     line-height: 22px;
     font-size: 16px;
+    width: 90%;
+}
+
+.hero .content a {
+    color: #fff;
+    background-color: black;
+    width: 170px;
+    height: 42px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    margin-top: 30px;
 }
 
 .photo-padding {
-    width: 222px;
+    width: 300px;
+    position: relative;
 }
 
 
@@ -101,6 +142,17 @@ ul.nav-links {
 
 .hero .photo .photo-caption {
     font-size: 12px;
+    width: 90%;
+    margin-top: 4px;
+}
+
+.hero .photo .signature {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 30px;
+    position: absolute;
+    right: -90px;
+    transform: rotate(340deg);
+    bottom: -20px;
 }
 
 
@@ -115,4 +167,40 @@ ul.nav-links {
 .books h3 {
     text-align: center;
     font-size: 35px;
+}
+
+.releases {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/********************************/
+/********  social styles  *******/
+/********************************/
+
+.social {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 100vh;
+    /* background-color: pink; */
+}
+
+.social ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 12px;
+}
+
+.social img {
+    width: 18px;
+    height: 18px;
 }
