@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: 1px solid red;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+/********************************/
+/*******  header styles  ********/
+/********************************/
+
+h1.logo {
+    text-align: center;
+}
+
+ul.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav-links li a {
+    padding: 4px 8px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
