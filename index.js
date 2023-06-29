@@ -20,3 +20,7 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+
+var tl = gsap.timeline();
+tl.from("body", {opacity: 0 , duration: 2});
