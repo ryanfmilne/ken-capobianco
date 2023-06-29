@@ -23,4 +23,4 @@ function myFunction() {
 
 
 var tl = gsap.timeline();
-tl.from("body", {opacity: 0 , duration: 2});
+tl.from("body", {opacity: 0 , duration: 3});
