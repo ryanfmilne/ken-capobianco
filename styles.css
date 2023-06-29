@@ -46,6 +46,16 @@ h1.logo {
 .top-bar img {
     width: 16px;
     height: 16px;
+    cursor: pointer;
+    transition: all ease .1s;
+}
+
+.top-bar img:hover {
+    scale: 1.2;
+}
+
+.burg {
+    display: none;
 }
 
 ul.nav-links {
@@ -77,15 +87,21 @@ ul.nav-links {
     display: flex;
     height: 680px;
     padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .hero .content {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     background-color: #E5E8E5;
     justify-content: center;
+    padding-left: 5%;
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.893), rgba(255, 255, 255, 0.899)), url(./assets/press.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero .photo {
@@ -95,6 +111,7 @@ ul.nav-links {
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 30px;
+
 }
 
 .content-padding {
@@ -113,7 +130,7 @@ ul.nav-links {
 }
 
 .hero .content h2 span {
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .hero .content p {
@@ -131,7 +148,13 @@ ul.nav-links {
     text-decoration: none;
     line-height: 40px;
     margin-top: 30px;
+    transition: all ease .1s;
 }
+
+.hero .content a:hover {
+    scale: 1.04;
+}
+
 
 .photo-padding {
     width: 300px;
@@ -216,8 +239,12 @@ ul.nav-links {
 .social img {
     width: 18px;
     height: 18px;
+    transition: all ease .1s;
 }
 
+.social img:hover {
+    scale: 1.2;
+}
 /********************************/
 /*******  Footer styles  ********/
 /********************************/
@@ -228,9 +255,26 @@ ul.nav-links {
 }
 
 
+/********************************/
+/****  Scroll to top styles  ****/
+/********************************/
 
+.to-top {
+    width: 30px;
+    height: 30px;
+    color: #ccc;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: all ease .1s;
+}
 
-
+.to-top:hover {
+    scale: 1.2;
+}
 
 
 
@@ -251,4 +295,77 @@ ul.nav-links {
     /* background: #E2A42B; */
     background: #000;
     width: 0%;
+  }
+
+
+
+
+/********************************/
+/*******  Media Queries  ********/
+/********************************/
+
+  /* the tablet */
+  @media screen and (max-width: 870px) {
+
+
+    .ticker {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .hero {
+      flex-direction: column-reverse;
+      height: unset;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .hero .photo, .hero .content {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero .content {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .hero .photo {
+        padding-top: 80px;
+    }
+
+    .content-padding {
+        text-align: center;
+        align-items: center;
+    }
+
+    .photo .photo-padding p.signature {
+        right: -40px; 
+        bottom: -14px;
+        font-size: 22px;
+    }
+
+    .releases {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
+
+  /* the phone */
+  @media screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
+    .burg {
+        display: block;
+        width: 30px;
+        background-color: #000;
+        border: 3px;
+        height: 2px;
+    }
   }
