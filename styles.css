@@ -11,6 +11,19 @@ body {
     color: #000;
 }
 
+  /******** Animation Land **********/
+  @keyframes slidein {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+
+  .slide
 
 /********************************/
 /*******  header styles  ********/
@@ -21,7 +34,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: #fff;
-    z-index: 9;
+    z-index: 9999;
 }
 
 .header .top-bar {
@@ -105,6 +118,8 @@ ul.nav-links {
     padding: 9px 0px 12px 0px;
     gap: 30px;
     user-select: none;
+
+    /* animation: slidein 2s; */
 }
 
 .nav-links li a {
@@ -118,6 +133,18 @@ ul.nav-links {
     cursor: pointer;
 }
 
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000000d3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    display: none;
+
+}
 
 /********************************/
 /********  hero styles  *********/
@@ -219,6 +246,7 @@ ul.nav-links {
 .photo-padding {
     position: relative;
     text-align: center;
+    z-index: 4;
     /* box-shadow: rgb(255 255 255) -50px 77px 129px 80px; */
 }
 
@@ -622,7 +650,22 @@ div#intro {
 
   /* the phone */
   @media screen and (max-width: 600px) {
-    nav {
+
+    nav#nav-menu {
+        overflow: hidden;
+        max-height: 0; 
+    }
+
+    nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 0px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    nav .nav-links li:first-of-type {
         display: none;
     }
 
@@ -630,9 +673,18 @@ div#intro {
         display: block;
     }
 
+
+    .header {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background-color: #fff;
+    }
+
     .header .top-bar {
         justify-content: space-between;
         padding: 12px 20px;
+
     }   
 
     .header .top-bar .logo {
@@ -688,3 +740,9 @@ div#intro {
     }
 
   }
+
+
+
+
+
+
