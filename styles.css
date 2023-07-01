@@ -11,6 +11,7 @@ body {
     color: #000;
 }
 
+
 /********************************/
 /*******  header styles  ********/
 /********************************/
@@ -24,24 +25,32 @@ body {
 }
 
 .header .top-bar {
-    padding: 12px 0px;
+    padding: 12px 6%;
     border-bottom: 1px solid #f2f2f2;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 h1.logo {
     text-align: left;
-    font-size: 18px;
+    font-size: 22px;
     user-select: none;
     cursor: pointer;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1.logo img {
+    transform: translateY(2px);
 }
 
 .top-bar .ticker {
     font-style: italic;
     font-size: 14px;
-    opacity: .4;
 }
 
 .top-bar .mode {
@@ -121,38 +130,31 @@ ul.nav-links {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    background:linear-gradient(0deg, rgba(255, 255, 255, 0.893), rgba(255, 255, 255, 0.899)), url(./assets/press-bw.jpg);
+
+    /* color background */
+    /* background:linear-gradient(0deg, rgba(208, 180, 0, 0.893), rgba(208, 180, 0, 0.893)), url(./assets/press-bw.jpg); */
+    background-position: center;
+    background-size: cover;
 }
 
 .hero .content {
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    background-color: #E5E8E5;
     justify-content: center;
-    padding-left: 5%;
-    background:linear-gradient(0deg, rgba(255, 255, 255, 0.893), rgba(255, 255, 255, 0.899)), url(./assets/press.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     filter: grayscale(1);
 }
 
-.hero .photo {
-    width: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 90px;
-
-}
-
 .content-padding {
-    width: 540px;
-    height: 400px;
+    padding: 0 60px 60px 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 690px;
 }
 
 .hero .content h2 {
@@ -189,37 +191,52 @@ ul.nav-links {
 }
 
 
-.photo-padding {
-    width: 300px;
-    position: relative;
-    box-shadow: rgb(255 255 255) -50px 77px 129px 80px;
-    border-radius: 152px;
-    background: #fff;
+/* right side with photo */
+
+.hero .photo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: none !important;
+
 }
 
-
 .hero .photo img {
-    width: 100%;
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
     text-align: center;
     /* filter: grayscale(100%); */
     filter: sepia(.2);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* border-radius: 143px 143px 90px 0px; */
+    box-shadow: -20px 20px 30px 10px #fff;
+    border-radius: 0 0 300px 300px;
+    transition: all ease .4s;
 }
 
+.photo-padding {
+    position: relative;
+    text-align: center;
+    /* box-shadow: rgb(255 255 255) -50px 77px 129px 80px; */
+}
+
+
 .hero .photo .photo-caption {
-    font-size: 12px;
-    width: 90%;
-    margin-top: 4px;
+    font-size: 14px;
+    margin-top: 30px;
+    line-height: 20px;
+    max-width: 540px;
 }
 
 .hero .photo .signature {
     font-family: 'Pinyon Script', cursive;
     font-size: 30px;
     position: absolute;
-    right: -90px;
     transform: rotate(340deg);
-    bottom: -20px;
+    bottom: 73px;
+    right: 0px;
 }
 
 /* logos */
@@ -367,7 +384,12 @@ div#intro {
 }
 
 .book-details h4 {
-    font-size: 22px;
+    font-size: 28px;
+    font-style: italic
+}
+
+.book-details h4.fg {
+    padding-right: 38px;
 }
 
 .book-details .isbn span {
@@ -476,6 +498,7 @@ div#intro {
 
 
 
+
 /********************************/
 /******  Progress styles  *******/
 /********************************/
@@ -487,31 +510,53 @@ div#intro {
     background: #ccc;
   }
   
+
+
+
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 4px;
     /* background: #E2A42B; */
-    background: #000;
+    background: rgb(0, 0, 0);
     width: 0%;
     position: relative;
   }
 
-  .progress-bar::after {
+  /* .progress-bar::after {
     content: "";
     width: 8px;
     height: 8px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(196, 217, 0);
     right: -3px;
     top: -2px;
     position: absolute;
     border-radius: 50%;
+  } */
+
+
+
+/************************************************/
+/************************************************/
+/************************************************/
+/*******  Media Queries  ************************/
+/************************************************/
+/************************************************/
+/************************************************/
+
+
+
+  /* the tablet larger */
+  @media screen and (max-width: 1060px) {
+
+    .hero .photo img {
+        width: 440px;
+    }
+
+    .hero .photo .signature {
+        bottom: 91px;
+    }
+
   }
-
-
-
-/********************************/
-/*******  Media Queries  ********/
-/********************************/
 
   /* the tablet */
   @media screen and (max-width: 870px) {
@@ -533,7 +578,7 @@ div#intro {
       overflow: hidden;
     }
 
-    .hero .photo, .hero .content {
+    .hero .content {
         width: 100%;
         overflow: hidden;
     }
@@ -545,11 +590,16 @@ div#intro {
 
     .hero .photo {
         padding-top: 80px;
+        width: 100%;
+        overflow: hidden;
+
     }
+
 
     .content-padding {
         text-align: center;
         align-items: center;
+        padding: 50px;
     }
 
     .photo .photo-padding p.signature {
@@ -585,21 +635,56 @@ div#intro {
         padding: 12px 20px;
     }   
 
+    .header .top-bar .logo {
+        font-size: 24px;
+    }
+
     .top-bar .mode {
         display: none;
     }
 
+    .hero {
+        background-position: top;
+        background-size: 300%;
+        background-repeat: no-repeat;
+    }
+
+    .hero .photo img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
     .hero .photo {
         padding-top: 40px;
+        padding-bottom: 50px;
+
+    }
+
+    .photo .photo-padding p.signature {
+        right: 23px;
+        bottom: 106px;
+    }
+
+    .hero .photo .photo-caption {
+        padding: 0px 60px;
     }
 
     .content-padding {
-        width: unset;
+        padding: 50px;
     }
 
     #hero .content .content-padding h2, #hero .content .content-padding span {
         font-size: 66px;
     }
 
+    .books {
+        padding: 50px;
+        margin-bottom: 100px;
+    }
+
+    .books .releases {
+        gap: 0;
+    }
 
   }
